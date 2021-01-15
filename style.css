@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url("img/snake_bg.png");
+    position: relative;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--cor-da-borda);
+    margin-bottom: 10px;
+}
+
+#title h1 {
+    font-size: 30px;
+    padding: 5px 0;
+}
+
+#title p {
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#default {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#painel {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-de-fundo);
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.painel-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px;
+}
+
+#controller {
+    width: 100%;
+    height: 183px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#up,
+#left-right,
+#down {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#screen-game,
+#snake {
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#screen-game {
+    border: 0.5px solid var(--cor-da-borda);
+}
+
+#sms {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text-sms {
+    font-size: 18px;
+}
+
+#keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor-da-borda);
+    background: var(--cor-de-botao);
+    border-radius: 4px;
+}
+
+button.btn {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: 900;
+    transition: box-shadow .2s;
+}
+
+button.btn:hover,
+button.btn:active {
+    box-shadow: 1px 1px 2px 2px var(--cor-da-borda);
+}
+
+div#left-right .btn:first-child {
+    margin-right: 30px;
+}
+
+div#left-right .btn:last-child {
+    margin-left: 30px;
+}
+
+:root {
+    --cor-do-titulo: #06f812;
+    --cor-de-fundo: #bde2f3;
+    --cor-de-botao: rgba(247, 9, 9, 0.6);
+    --cor-da-borda: white;
+    --cor-da-mensagem: #1228ec;
+}
+
+@media(max-width: 500px) {
+    #content {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    #default {
+        width: 100vw;
+    }
+    #screen-game,
+    #snake {
+        width: 100vw;
+    }
+}

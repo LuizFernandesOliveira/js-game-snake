@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Snake Game</title>
+</head>
+
+<body>
+
+  <div id="game">
+    <div id="content">
+      <div id="default">
+        <div id="title">
+          <h1>Snake Game</h1>
+          <p><strong>Desenvolvedor: </strong> @lfooficial</p>
+        </div>
+        <div id="painel">
+          <div class="painel-item">
+            <p id="point">Pontos: </p>
+            <span id="span-point"></span>
+          </div>
+          <hr />
+          <div class="painel-item">
+            <p id="level">Nível: </p>
+            <span id="span-level"></span>
+          </div>
+          <hr />
+          <div class="painel-item">
+            <p id="point-max">Ponto Máximo: </p>
+            <span id="span-point-max"></span>
+          </div>
+        </div>
+        <div id="controller">
+
+          <div id="up">
+            <button id="btnUp" class="btn">&uarr;</button>
+          </div>
+          <div id="left-right">
+            <button id="btnLeft" class="btn">&larr;</button>
+            <button id="btnRight" class="btn">&rarr;</button>
+          </div>
+          <div id="down">
+            <button id="btnDown" class="btn">&darr;</button>
+          </div>
+
+        </div>
+      </div>
+      <div id="screen-game">
+        <canvas id="snake" width="400" height="400"></canvas>
+        <div id="sms">
+          <p class="text-sms">Digite no teclado uma das teclas </p>
+          <div id="keys">
+            <div class="btn">&uarr;</div>
+            <div class="btn">&rarr;</div>
+            <div class="btn">&darr;</div>
+            <div class="btn">&larr;</div>
+          </div>
+          <p class="text-sms">para Começar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="game.js"></script>
+</body>
+
+</html>
